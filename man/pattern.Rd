@@ -1,0 +1,54 @@
+\name{pattern}
+\alias{pattern}
+\alias{pattern<-}
+\title{Returns and updates pattern attribute.}
+\usage{
+  pattern(x)
+
+  pattern(x) <- value
+}
+\arguments{
+  \item{x}{surveydata object}
+
+  \item{value}{New value}
+}
+\description{
+  The pattern attribute contains information about the
+  separator character used to name subquestions in the
+  data.  Survey software typically makes use of underscores
+  to distinguish subquestions in a grid of questions, e.g.
+  Q4_1, Q4_2, Q4_3, Q4_other. The function \code{pattern}
+  returns the pattern attribute, and \code{pattern<-}
+  updates the attribute.
+}
+\examples{
+# Extract the pattern from membersurvey
+
+oldptn <- pattern(membersurvey)
+oldptn
+
+# The pattern is used to extract columns
+
+names(membersurvey)
+grep("Q20", names(membersurvey), value=TRUE)
+
+head(membersurvey["Q20"])
+head(membersurvey["Q20_other"])
+
+# Define a new pattern
+
+pattern(membersurvey) <- list(sep="_", exclude="")
+head(membersurvey["Q20"])
+
+# Reset original pattern
+
+pattern(membersurvey) <- oldptn
+rm(oldptn)
+}
+\seealso{
+  \code{\link{as.surveydata}}, \code{\link{which.q}}
+
+  Other Attribute functions: \code{\link{varlabels}},
+  \code{\link{varlabels<-}}
+}
+
