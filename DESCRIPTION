@@ -1,6 +1,6 @@
 Package: surveydata
-Version: 0.2.2
-Date: 2018-12-06
+Version: 0.2.3
+Date: 2019-01-23
 License: GPL-2 | GPL-3
 Title: Tools to Work with Survey Data
 LazyData: true
@@ -24,8 +24,8 @@ RoxygenNote: 6.1.1
 VignetteBuilder: knitr
 Encoding: UTF-8
 NeedsCompilation: no
-Packaged: 2018-12-06 18:32:52 UTC; apdev
+Packaged: 2019-01-23 12:31:55 UTC; apdev
 Author: Andrie de Vries [aut, cre, cph]
 Maintainer: Andrie de Vries <apdevries@gmail.com>
 Repository: CRAN
-Date/Publication: 2018-12-06 18:50:03 UTC
+Date/Publication: 2019-01-23 12:50:04 UTC
