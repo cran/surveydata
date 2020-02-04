@@ -116,13 +116,6 @@ question_text <- function(x, Q) {
   }
 }
 
-#' @export
-#' @rdname surveydata-deprecated
-qText <- function(...) {
-  .Deprecated("question_text")
-  question_text(...)
-}
-
 
 #' Returns unique elements of question text.
 #'
@@ -138,14 +131,6 @@ qText <- function(...) {
 question_text_unique <- function(x, Q) {
   text <- question_text(x, Q)
   split_common_unique(text)$unique
-}
-
-
-#' @export
-#' @rdname surveydata-deprecated
-qTextUnique <- function(...) {
-  .Deprecated("question_text_unique")
-  question_text_unique(...)
 }
 
 
@@ -166,15 +151,7 @@ question_text_common <- function(x, Q) {
 }
 
 
-#' @export
-#' @rdname surveydata-deprecated
-qTextCommon <- function(...) {
-  .Deprecated("question_text_common")
-  question_text_common(...)
-}
-
-
-#' Get common and unique text in question based on regex pattern identification
+#' Get common and unique text in question based on regex pattern identification.
 #'
 #' @param x A character vector
 #' @family Question functions
@@ -224,8 +201,8 @@ split_common_unique <- function(x, ptn = NULL) {
 
   bp <- identify_pattern(ptn, x) # best pattern
   z <- list(
-    common = gsub(bp$ptn, bp$grep_c, x)[1] %>% str_trim(),
-    unique = gsub(bp$ptn, bp$grep_u, x) %>% str_trim()
+    common = trimws(gsub(bp$ptn, bp$grep_c, x)[1]),
+    unique = trimws(gsub(bp$ptn, bp$grep_u, x))
   )
   nNa <- sum(is.na(z$unique))
   if (nNa > 0) z$unique[is.na(z$unique)] <- paste("NA_", seq_len(nNa), sep = "")

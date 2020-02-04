@@ -2,7 +2,7 @@
 % Please edit documentation in R/plots.R
 \name{survey_plot_satisfaction}
 \alias{survey_plot_satisfaction}
-\title{Plot satisfaction}
+\title{Plot satisfaction questions.}
 \usage{
 survey_plot_satisfaction(data, q, fun = c("net", "top3", "top2"))
 }
@@ -14,7 +14,7 @@ survey_plot_satisfaction(data, q, fun = c("net", "top3", "top2"))
 \item{fun}{Aggregation function, one of \code{net} (compute net satisfaction score), \code{top3} (compute top 3 box score) and \code{top2} (compute top 2 box score)}
 }
 \description{
-Plot satisfaction
+Plot satisfaction questions.
 }
 \examples{
 question_text(membersurvey)
@@ -25,7 +25,8 @@ survey_plot_satisfaction(membersurvey, "Q14")
 
 }
 \seealso{
-Other survey plotting functions: \code{\link{survey_plot_question}},
-  \code{\link{survey_plot_yes_no}}
+Other survey plotting functions: 
+\code{\link{survey_plot_question}()},
+\code{\link{survey_plot_yes_no}()}
 }
 \concept{survey plotting functions}
