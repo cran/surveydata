@@ -1,6 +1,6 @@
 Package: surveydata
-Version: 0.2.4
-Date: 2020-02-04
+Version: 0.2.5
+Date: 2020-04-21
 License: GPL-2 | GPL-3
 Title: Tools to Work with Survey Data
 LazyData: true
@@ -17,20 +17,21 @@ Description: Data obtained from surveys contains information not only about the
     keep track of this metadata, and to easily extract columns with
     specific questions.
 URL: https://github.com/andrie/surveydata,
-        https://andrie.github.io/surveydata/index.html
+        https://andrie.github.io/surveydata
 BugReports: https://github.com/andrie/surveydata/issues
 ByteCompile: yes
 Depends: R (>= 3.0.0)
 Imports: dplyr, rlang, magrittr, purrr, ggplot2, scales, tidyr, DT,
         assertthat
-Suggests: testthat, knitr, rmarkdown, withr, covr, rprojroot
-RoxygenNote: 7.0.2
+Suggests: testthat, knitr, rmarkdown, withr, covr, rprojroot, spelling
+RoxygenNote: 7.1.0
 VignetteBuilder: knitr
 Encoding: UTF-8
+Language: en-GB
 NeedsCompilation: no
-Packaged: 2020-02-04 04:40:01 UTC; apdev
+Packaged: 2020-04-21 11:06:45 UTC; apdev
 Author: Andrie de Vries [aut, cre, cph],
   Evan Odell [ctb]
 Maintainer: Andrie de Vries <apdevries@gmail.com>
 Repository: CRAN
-Date/Publication: 2020-02-04 16:10:02 UTC
+Date/Publication: 2020-04-21 11:20:03 UTC
